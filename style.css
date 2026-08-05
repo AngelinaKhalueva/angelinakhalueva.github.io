@@ -1,0 +1,63 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Переменные */
+:root {
+    --animaton_duration: 3s; 
+    --title-delay: 0.5s;
+    --text-delay: 1s;
+    --button-delay: 1.5s;
+}
+
+/* Анимация выезжания справа */
+@keyframes move_text {
+    0% {
+        transform: translateX(100vw); 
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+h1 {
+    animation: move_text var(--animaton_duration) ease-out forwards;
+    animation-delay: var(--title-delay); 
+    margin-top: 150px;
+    opacity: 0;
+}
+
+p {
+    animation: move_text var(--animaton_duration) ease-out forwards;
+    animation-delay: var(--text-delay); 
+    opacity: 0;
+}
+
+input[type="button"] {
+    animation: move_text var(--animaton_duration) ease-out forwards;
+    animation-delay: var(--button-delay); 
+    opacity: 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    transform: translateX(100vw); 
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+header, footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+main {
+    text-align: center;
+}
